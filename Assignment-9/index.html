@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Admission Form</title>
+</head>
+<body>
+    <h1>College Admission Form</h1>
+    <form>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+
+        <br><br>
+
+        <label for="date">Date of Birth:</label>
+        <input type="date" id="date">
+        <br><br>
+
+        <label>Gender:</label>
+        <input type="radio" name="gender"> Male
+        <input type="radio" name="gender"> Female
+        <br><br>
+
+        <label>Courses:</label>
+        <input type="checkbox"> BCA
+        <input type="checkbox"> BBA
+        <input type="checkbox"> BCCA
+        <br>
+        <br>
+        <label>City:</label>
+        <select>
+            <option>Nagpur</option>
+            <option>Pune</option>
+            <option>Mumbai</option>
+        </select>
+        <br><br>
+<label>Favourite Subject:</label>
+        <input list="subjects">
+
+        <datalist id="subjects">
+            <option>HTML</option>
+            <option>CSS</option>
+            <option>JavaScript</option>
+        </datalist>
+        <br><br>
+
+        <label>Upload Photo:</label>
+        <input type="file" accept="image/*">
+        <br><br>
+
+        <input type="button" value="Confirm">
+        <input type="submit" value="Submit">
+
+    </form>
+</body>
+</html>

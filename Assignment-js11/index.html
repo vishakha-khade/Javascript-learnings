@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Enter Number1: <input type="text" id="num1" ></h1>
+    <h1>Enter Number2: <input type="text" id="num2"></h1>
+    
+    <h3 id="answer">Answer: </h3>
+
+    <button type="button" id="calculate" onclick="calculate()">Calculate</button>
+    <button type="reset" id="reset" onclick="reset()">Reset</button>
+
+    <script>
+
+        const number1 = document.getElementById("num1");
+        const number2 = document.getElementById("num2");
+        const ans = document.getElementById("answer");
+        
+
+        function calculate(){
+            const val1 = number1.value;
+            const val2 = number2.value;
+        
+
+            const sum1 = parseInt(val1);
+            const sum2 = parseInt(val2);
+
+            const calculation = sum1 + sum2;
+            ans.innerText = `Answer: ${calculation}`;
+        }
+
+        function reset(){
+
+            number1.value = " ";
+            number2.value = " ";
+            ans.innerText = "Answer: ";
+        }
+    </script>
+</body>
+</html>

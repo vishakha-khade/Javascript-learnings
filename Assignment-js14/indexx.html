@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    
+    <img src="./offbulb1.png" alt="light-bulb" id="bulb" height="400px">
+    <br>
+    <button type="button" id="on" onclick="bulb()">Toggle</button>
+    <!-- <button type="button" id="off" onclick="bulbOff()">OFF</button> -->
+
+    <script>
+        const Button = document.getElementById("bulb");
+        
+        let state = false;
+
+        function bulb(){
+            if (state === false) {
+                Button.src = "onBulb.png"
+                state = true;
+            }
+            else{
+                Button.src = "offbulb1.png"
+                state = false;
+            }
+        }
+    </script>
+</body>
+</html>
+  
+
+
+
+
+
+
+
+
+<!-- // function bulbOn(){
+            
+        //     Button.src = "onBulb.png"
+        // }
+
+        // function bulbOff(){
+        //     Button.src = "offbulb1.png"
+        // } -->

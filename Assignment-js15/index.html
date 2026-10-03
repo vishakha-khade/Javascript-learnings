@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<style>
+    h1{
+        text-align: center;
+    }
+    div{
+        display: flex;
+        justify-content: center;
+    }
+    .gallery-img{
+        height: 800px;
+    }
+    #left{
+         margin-top: 400px;
+    }
+    #right{
+         margin-top: 400px;
+    }
+    button{
+        width: 40px;
+    }
+</style>
+<body>
+    <h1>
+        Image Gallery
+    </h1>
+
+    <div>
+        <button style="height: 40px;" id="left" onclick="previous()"><img src="./images/left-arrow.png" alt="" style="height: 30px;"></button>
+        
+        <img src="./images/image1.jpg" class="gallery-img" id="img">
+
+        <button style="height: 40px;" id="right" onclick="next()"><img src="./images/right-arrow.png" alt="" style="height: 30px;"></button>
+    </div>
+
+    <script>
+        const images = [
+            "./images/image1.jpg",
+            "./images/image2.jpg",
+            "./images/image3.jpg",
+            "./images/image4.jpg",
+            "./images/image5.jpg",
+            "./images/image6.jpg",
+        ]
+
+        let imageI = 0;
+
+        const imgElement = document.getElementById("img");
+
+        function next(){
+        
+            (imageI == images.length -1) ? imageI = 0 : imageI++;
+            imgElement.src = images[imageI];
+        }
+        function previous(){
+
+        imageI == 0 ? imageI = images.length -1 : imageI--;
+         imgElement.src = images[imageI];
+        }
+    </script>
+</body>
+</html>

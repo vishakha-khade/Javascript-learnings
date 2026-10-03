@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<style>
+
+</style>
+<body>
+    <h1>Dice Roller</h1>
+    <img src="./dice1.png" alt="dice" height="400px" id="img">
+    <br>
+    <br/>
+    <button style="height: 30px; width: 70px; font-size: medium;" id="button" onclick="diceRoll()">Roll</button>
+
+    <script>
+        const dice = document.getElementById("button");
+        const image = document.getElementById("img");
+
+        function diceRoll() {
+           let  min = 1;
+           let max = 7;
+             
+           let number = Math.floor(Math.random() * (max - min)) +1 ;
+           console.log(number);
+           
+           if(number === 1){
+             image.src = "./dice1.png";
+           }
+           else if(number === 2){
+            image.src = "./dice2.png";
+           }
+           else if(number === 3){
+            image.src = "./dice3.png";
+           }
+           else if(number === 4){
+            image.src = "./dice4.png";
+           }
+           else if(number === 5){
+            image.src = "./dice5.png";
+           }
+           else if(number === 6){
+            image.src = "./dice6.png";
+           }
+        }
+    </script>
+</body>
+</html>
